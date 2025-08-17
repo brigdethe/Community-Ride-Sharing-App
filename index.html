@@ -2,53 +2,9 @@
 <html class="html" lang="en-GB">
   <head>
   <script type="text/javascript" src="/wp-content/themes/beaucoup/tarteaucitron/tarteaucitron.js"></script>
-<script type="text/javascript">
-  window.tarteaucitronForceLanguage = "en";
- 
- var tarteaucitronCustomText = {
-    acceptAll: "Accept",
-    personalize: "Preferences",
-    alertBigPrivacy: "By clicking on \"Accept\", you agree to the installation of cookies on your browser in order to improve your browsing experience and the acquisition of statistics. See our legal notice for more information.",
-    title: "Preferences",
-    disclaimer: "By authorizing these third-party services, you accept the deposit and reading of cookies and the use of tracking technologies necessary for their proper functioning.",
-    all: "All services preferences",
-    mandatoryText: "This site uses cookies which are necessary for its proper operation. They cannot be deactivated.",
-    analytic: {
-        "details": "Audience measurement services are used to generate visitor statistics, which are useful for improving the site."
-    }
-  }
+<!-- moved to assets/js/main.js -->
 
-  tarteaucitron.init({
-    "privacyUrl": "", /* Privacy policy url */
-    "hashtag": "#tarteaucitron", /* Open the panel with this hashtag */
-    "cookieName": "tarteaucitron", /* Cookie name */
-    "orientation": "bottom", /* Banner position (top - bottom) */
-    "groupServices": false, /* Group services by category */
-    "showAlertSmall": false, /* Show the small banner on bottom right */
-    "cookieslist": false, /* Show the cookie list */
-    "closePopup": false, /* Show a close X on the banner */
-    "showIcon": false, /* Show cookie icon to manage cookies */
-    // "iconSrc": "../images/svg/arrow-bold.svg", /* Optionnal: URL or base64 encoded image */
-    // "iconPosition": "BottomRight", /* BottomRight, BottomLeft, TopRight and TopLeft */
-    "adblocker": false, /* Show a Warning if an adblocker is detected */
-    "DenyAllCta" : false, /* Show the deny all button */
-    "AcceptAllCta" : true, /* Show the accept all button when highPrivacy on */
-    "highPrivacy": true, /* HIGHLY RECOMMANDED Disable auto consent */
-    "handleBrowserDNTRequest": false, /* If Do Not Track == 1, disallow all */
-    "removeCredit": true, /* Remove credit link */
-    "moreInfoLink": false, /* Show more info link */
-    "useExternalCss": false, /* If false, the tarteaucitron.css file will be loaded */
-    "useExternalJs": false, /* If false, the tarteaucitron.js file will be loaded */
-    "readmoreLink": "", /* Change the default readmore link */
-    "mandatory": true, /* Show a message about mandatory cookies */
-  });
-</script>
-
-  <script type="text/javascript">
-    tarteaucitron.user.gtagUa ='G-RDCZPBN3Z2';
-    tarteaucitron.user.gtagMore = function () {};
-    (tarteaucitron.job = tarteaucitron.job || []).push('gtag');
-  </script>
+  <!-- moved to assets/js/main.js -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="apple-touch-icon" sizes="57x57" href="/wp-content/themes/beaucoup/resources/favicon/apple-touch-icon-57x57.png">
@@ -77,95 +33,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
   
   <!-- Custom CSS for rounded font styling -->
-  <style>
-    * {
-      font-family: 'Nunito', sans-serif !important;
-    }
-    
-    /* Make headings extra rounded and friendly */
-    h1, h2, h3, h4, h5, h6, .font-black {
-      font-family: 'Nunito', sans-serif !important;
-      font-weight: 900 !important;
-      letter-spacing: 0.02em !important;
-    }
-    
-    /* Body text with softer weight */
-    p, div, a, button {
-      font-family: 'Nunito', sans-serif !important;
-      font-weight: 600 !important;
-    }
-    
-    /* Span elements with font-black should maintain their boldness */
-    span {
-      font-family: 'Nunito', sans-serif !important;
-      font-weight: 600 !important;
-    }
-    
-    /* Override for font-black spans specifically */
-    .font-black span, span.font-black, .font-black {
-      font-weight: 900 !important;
-    }
-    
-    /* Menu items */
-    .menu__item {
-      font-family: 'Nunito', sans-serif !important;
-      font-weight: 700 !important;
-    }
-    
-    /* Logo styling */
-    .text-green, .text-beige, .text-light-green {
-      font-family: 'Nunito', sans-serif !important;
-    }
-    
-    /* Motorcycle animation */
-    @keyframes motorcycleMove {
-      0% {
-        transform: translateX(-15px);
-      }
-      50% {
-        transform: translateX(15px);
-      }
-      100% {
-        transform: translateX(-15px);
-      }
-    }
-    
-    .motorcycle-animate {
-      animation: motorcycleMove 3s ease-in-out infinite;
-    }
-    
-    .motorcycle-animate.paused {
-      animation-play-state: paused;
-    }
-
-    /* Store buttons */
-    .store-buttons a {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
-      padding: 0.9rem 1.8rem;
-      border: 1px solid #076442;
-      border-radius: 2rem;
-      background: #f9f7e7;
-      color: #076442;
-      font-weight: 700;
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      transition: background 0.3s ease, color 0.3s ease;
-    }
-
-    .store-buttons a:hover {
-      background: #076442;
-      color: #f9f7e7;
-    }
-
-    .store-buttons svg {
-      width: 1.2rem;
-      height: 1.2rem;
-      fill: currentColor;
-      flex-shrink: 0;
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/styles.css">
   
   <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
 	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
@@ -207,8 +75,8 @@
       <div class="menu__overflow lg:h-full max-lg:flex-1 max-lg:flex max-lg:flex-col max-lg:justify-between max-lg:gap-y-15 max-lg:pt-35 overflow-x-hidden overflow-y-auto" data-lenis-prevent>
         <div class="lg:h-full flex flex-col lg:justify-center gap-y-30 text-green">
           <div class="menu__items flex max-lg:flex-col items-start lg:items-center gap-y-10 body-16 max-lg:text-28 max-lg:font-bold max-lg:leading-none">
-                                          <div>
-                  <div class="menu__item lg:px-15 xl:px-20 lg:whitespace-nowrap">Home</div>
+                                                                                      <div>
+                  <a class="menu__item lg:px-15 xl:px-20 lg:whitespace-nowrap" href="index.html">Home</a>
                 </div>
                                                         <div>
                   <div class="menu__item flex gap-x-15 lg:gap-x-5 items-center pr-15 lg:px-15 xl:px-20 lg:whitespace-nowrap cursor-pointer" data-index="1">
@@ -297,7 +165,7 @@
 </svg></div>
                               </div>
                             </div>
-                            <div class="submenu__item-title inline-block translate-x-[calc(2.5rem_+_1rem)] max-lg:text-16 max-lg:leading-[175%] align-bottom">Our Mission</div>
+                            <a class="submenu__item-title inline-block translate-x-[calc(2.5rem_+_1rem)] max-lg:text-16 max-lg:leading-[175%] align-bottom" href="components/mission.html">Our Mission</a>
                           </div>
                         </div>
                                               <div class="submenu__item relative pb-10 pt-15 border-b-green/20 border-b-px">
@@ -2421,45 +2289,11 @@ Soon...</div>
 //# sourceMappingURL=runtime.js.map
 </script>
 <script src="https://www.caeli-energie.com/wp-content/themes/beaucoup/public/js/app.js" id="app/0-js"></script>
-<script>
-(function() {
-				var expirationDate = new Date();
-				expirationDate.setTime( expirationDate.getTime() + 31536000 * 1000 );
-				document.cookie = "pll_language=en; expires=" + expirationDate.toUTCString() + "; path=/; secure; SameSite=Lax";
-			}());
-
-</script>
+<script src="assets/js/main.js" defer></script>
       </div>
     </div>
     
-    <script>
-      // Motorcycle animation trigger
-      document.addEventListener('DOMContentLoaded', function() {
-        const motorcycle = document.getElementById('hero-motorcycle');
-        const plantSection = document.querySelector('.home-cover__plant');
-        
-        if (motorcycle && plantSection) {
-          // Create an intersection observer to detect when plant section comes into view
-          const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                // Start motorcycle animation when plant section is visible
-                motorcycle.classList.remove('paused');
-              } else {
-                // Pause animation when plant section is not visible
-                motorcycle.classList.add('paused');
-              }
-            });
-          }, {
-            threshold: 0.3, // Trigger when 30% of the plant section is visible
-            rootMargin: '0px 0px -20% 0px' // Start animation a bit before reaching the section
-          });
-          
-          // Start observing the plant section
-          observer.observe(plantSection);
-        }
-      });
-    </script>
+    <!-- moved to assets/js/main.js -->
   </body>
 </html>
 

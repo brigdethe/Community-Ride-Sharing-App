@@ -1,0 +1,87 @@
+* {
+  font-family: 'Nunito', sans-serif !important;
+}
+
+/* Make headings extra rounded and friendly */
+h1, h2, h3, h4, h5, h6, .font-black {
+  font-family: 'Nunito', sans-serif !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.02em !important;
+}
+
+/* Body text with softer weight */
+p, div, a, button {
+  font-family: 'Nunito', sans-serif !important;
+  font-weight: 600 !important;
+}
+
+/* Span elements with font-black should maintain their boldness */
+span {
+  font-family: 'Nunito', sans-serif !important;
+  font-weight: 600 !important;
+}
+
+/* Override for font-black spans specifically */
+.font-black span, span.font-black, .font-black {
+  font-weight: 900 !important;
+}
+
+/* Menu items */
+.menu__item {
+  font-family: 'Nunito', sans-serif !important;
+  font-weight: 700 !important;
+}
+
+/* Logo styling */
+.text-green, .text-beige, .text-light-green {
+  font-family: 'Nunito', sans-serif !important;
+}
+
+/* Motorcycle animation */
+@keyframes motorcycleMove {
+  0% {
+    transform: translateX(-15px);
+  }
+  50% {
+    transform: translateX(15px);
+  }
+  100% {
+    transform: translateX(-15px);
+  }
+}
+
+.motorcycle-animate {
+  animation: motorcycleMove 3s ease-in-out infinite;
+}
+
+.motorcycle-animate.paused {
+  animation-play-state: paused;
+}
+
+/* Store buttons */
+.store-buttons a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.9rem 1.8rem;
+  border: 1px solid #076442;
+  border-radius: 2rem;
+  background: #f9f7e7;
+  color: #076442;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.store-buttons a:hover {
+  background: #076442;
+  color: #f9f7e7;
+}
+
+.store-buttons svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: currentColor;
+  flex-shrink: 0;
+} 
