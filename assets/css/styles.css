@@ -84,4 +84,35 @@ span {
   height: 1.2rem;
   fill: currentColor;
   flex-shrink: 0;
+}
+
+/* Fix contact us button alignment */
+.button {
+  align-items: center !important;
+}
+
+.button__arrows-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.button__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button__arrow svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Ensure proper vertical alignment for button text and icons */
+.button > * {
+  display: flex;
+  align-items: center;
+  line-height: 1;
 } 
