@@ -86,33 +86,99 @@ span {
   flex-shrink: 0;
 }
 
-/* Fix contact us button alignment */
-.button {
-  align-items: center !important;
+/* Ensure all buttons align content and arrow inline */
+a.button.button, .button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  line-height: 1;
 }
 
 .button__arrows-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+  margin-left: 0.75rem !important;
+  margin-right: 0 !important;
+  width: 2.25rem;
+  height: 2.25rem;
+  overflow: hidden;
 }
 
-.button__arrow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+@media (min-width: 1024px) {
+  .header .relative.flex-1 {
+    min-width: 0;
+  }
 
-.button__arrow svg {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
+  .header__button {
+    margin-left: auto;
+  }
 
-/* Ensure proper vertical alignment for button text and icons */
-.button > * {
-  display: flex;
-  align-items: center;
-  line-height: 1;
+  .header__button .button {
+    white-space: nowrap;
+  }
+
+  .header__button .button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    line-height: 1;
+  }
+
+  .header__button .button__arrows-wrapper {
+    position: static !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    align-self: center !important;
+    margin: 0 0 0 0.75rem !important;
+    width: 2.25rem !important;
+    height: 2.25rem !important;
+    overflow: visible !important;
+  }
+
+  /* Keep only the centered arrow visible */
+  .header__button .button__arrows-wrapper > div:nth-child(2) {
+    display: none !important;
+  }
+
+  /* Neutralize absolute positioning inside to avoid unexpected overflow */
+  .header__button .button__arrows-wrapper > div {
+    position: static !important;
+    transform: none !important;
+    left: auto !important;
+    top: auto !important;
+  }
+
+  /* Ensure wrapper is inside the button and clips overflow */
+  .header__button .button__arrows-wrapper {
+    position: relative !important;
+    overflow: hidden !important;
+  }
+
+  /* Force the centered arrow back to absolute center */
+  .header__button .button__arrows-wrapper > div:first-child {
+    position: absolute !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    display: block !important;
+  }
+
+  /* Hide the sliding arrow that can leak outside */
+  .header__button .button__arrows-wrapper > div:nth-child(2) {
+    display: none !important;
+  }
+
+  /* Fallback: hide problematic wrapper and render inline arrow via pseudo-element */
+  .header__button .button__arrows-wrapper {
+    display: none !important;
+  }
+
+  .header__button .button::after {
+    content: '';
+    display: inline-block;
+    margin-left: 0.75rem;
+    width: 0.9rem;
+    height: 0.9rem;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(-45deg);
+  }
 } 
