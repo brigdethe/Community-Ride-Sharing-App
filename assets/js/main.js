@@ -62,6 +62,54 @@ if (window.tarteaucitron && window.tarteaucitron.user) {
     '; path=/; secure; SameSite=Lax';
 })();
 
+// Smooth scrolling for anchor links and cross-page navigation
+document.addEventListener('DOMContentLoaded', function () {
+  // Handle cross-page navigation to anchor links
+  function handleAnchorNavigation() {
+    var hash = window.location.hash;
+    if (hash) {
+      var targetElement = document.querySelector(hash);
+      if (targetElement) {
+        // Small delay to ensure page is fully loaded
+        setTimeout(function () {
+          targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+            inline: 'nearest'
+          });
+        }, 100);
+      }
+    }
+  }
+
+  // Handle anchor navigation on page load
+  handleAnchorNavigation();
+
+  // Handle anchor navigation when hash changes
+  window.addEventListener('hashchange', handleAnchorNavigation);
+
+  // Handle smooth scrolling for all anchor links on the same page
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest('a[href^="#"]');
+    if (link && link.getAttribute('href') !== '#') {
+      var targetId = link.getAttribute('href');
+      var targetElement = document.querySelector(targetId);
+      
+      if (targetElement) {
+        e.preventDefault();
+        targetElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+          inline: 'nearest'
+        });
+        
+        // Update URL hash without triggering hashchange
+        history.pushState(null, null, targetId);
+      }
+    }
+  });
+});
+
 // Motorcycle animation trigger (moved from inline script)
 document.addEventListener('DOMContentLoaded', function () {
   var motorcycleImageElement = document.getElementById('hero-motorcycle');
