@@ -92,6 +92,8 @@ a.button.button, .button {
   align-items: center;
   gap: 0.75rem;
   line-height: 1;
+  position: relative;
+  overflow: hidden;
 }
 
 .button__arrows-wrapper {
@@ -180,5 +182,149 @@ a.button.button, .button {
     border-right: 2px solid currentColor;
     border-bottom: 2px solid currentColor;
     transform: rotate(-45deg);
+  }
+} 
+
+.cta-button {
+  padding: 1.2rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Team section */
+.team-section {
+  position: relative;
+  background: #f1efe6;
+  padding: 6rem 0;
+}
+.team-inner {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+  position: relative;
+}
+.team-heading {
+  color: #053725;
+  text-transform: uppercase;
+  text-align: left;
+  margin: 0 0 3rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+.team-card {
+  position: relative;
+  background: #eee5d6;
+  border-radius: 10px;
+  padding: 3rem 3rem 3rem 3rem;
+  margin: 5rem 0;
+  min-height: 22rem;
+}
+.team-card.card-left { /* image on left overlapping */ }
+.team-card.card-right { /* image on right overlapping */ }
+
+/* Decorative corners to mimic reference layout */
+.corner {
+  position: absolute;
+  width: 28%;
+  height: 42%;
+  background: #4b5b4f; /* muted green shape */
+  z-index: 1;
+}
+.corner-top-left {
+  left: -6%;
+  top: -12%;
+}
+.corner-bottom-right {
+  right: -6%;
+  bottom: -12%;
+}
+
+.photo-wrap {
+  width: 180px;
+  height: 180px;
+  border-radius: 9999px;
+  overflow: hidden;
+  position: absolute;
+  z-index: 2;
+  box-shadow: 0 10px 24px rgba(5,55,37,0.18);
+}
+.card-left .photo-wrap {
+  left: 6%;
+  top: -60px;
+}
+.card-right .photo-wrap {
+  right: 6%;
+  bottom: -60px;
+}
+.photo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-text {
+  position: relative;
+  z-index: 3;
+  color: #4a5a4e;
+  max-width: 56ch;
+}
+.card-left .team-text {
+  margin-left: 220px;
+}
+.card-right .team-text {
+  margin-right: 220px;
+  text-align: left;
+}
+.member-name {
+  color: #6b7c72;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+.member-role {
+  color: #718477;
+  line-height: 1.8;
+  max-width: 60ch;
+}
+
+/* Removed LinkedIn visual badge */
+
+@media (max-width: 1024px) {
+  .team-card {
+    padding: 2.25rem;
+  }
+  .photo-wrap {
+    width: 140px;
+    height: 140px;
+  }
+  .card-left .team-text { margin-left: 180px; }
+  .card-right .team-text { margin-right: 180px; }
+
+  /* Hide sliding arrow wrappers on mobile to avoid overflow artifacts */
+  .button__arrows-wrapper { display: none !important; }
+}
+
+@media (max-width: 640px) {
+  .corner { display: none; }
+  .team-card { margin: 4rem 0 6rem; }
+  .card-left .photo-wrap,
+  .card-right .photo-wrap {
+    position: static;
+    margin: -90px auto 1.25rem;
+    display: block;
+  }
+  .card-left .team-text,
+  .card-right .team-text {
+    margin: 0;
+    text-align: center;
+    max-width: none;
   }
 } 
