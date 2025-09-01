@@ -185,6 +185,30 @@ a.button.button, .button {
   }
 } 
 
+.section-pad-y-80 { padding-top: 5rem; padding-bottom: 5rem; }
+.section-pad-y-120 { padding-top: 7.5rem; padding-bottom: 7.5rem; }
+.max-w-measure { max-width: 68ch; }
+.centered { margin-left: auto; margin-right: auto; }
+.rounded-card {
+  background: #f9f7e7;
+  border: 1px solid rgba(7, 100, 66, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+.rounded-card--elevated { box-shadow: 0 8px 20px rgba(5, 55, 37, 0.08); }
+.heading-eyebrow {
+  text-transform: uppercase;
+  color: #076442;
+  letter-spacing: 0.12em;
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+.stack-8 > * + * { margin-top: 0.5rem; }
+.stack-12 > * + * { margin-top: 0.75rem; }
+.stack-16 > * + * { margin-top: 1rem; }
+.stack-24 > * + * { margin-top: 1.5rem; }
+.stack-32 > * + * { margin-top: 2rem; }
+
 .cta-button {
   padding: 1.2rem 2.5rem;
   font-size: 1.1rem;
@@ -226,8 +250,7 @@ a.button.button, .button {
   margin: 5rem 0;
   min-height: 22rem;
 }
-.team-card.card-left { /* image on left overlapping */ }
-.team-card.card-right { /* image on right overlapping */ }
+/* left/right variants were unused; removed empty rulesets to satisfy linter */
 
 /* Decorative corners to mimic reference layout */
 .corner {
