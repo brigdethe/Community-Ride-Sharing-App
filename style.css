@@ -463,3 +463,48 @@
 		padding: 14px 20px;
 	}
 }
+
+.contact-us__info-links {
+	display: flex;
+	flex-direction: row;
+	gap: 16px;
+	margin-top: 24px;
+}
+
+.contact-us__info-link {
+	display: inline-flex;
+	align-items: center;
+	text-decoration: none;
+}
+
+.contact-us__icon-circle {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: #ff5757;
+	flex-shrink: 0;
+}
+
+.contact-us__icon-circle svg {
+	color: #ffffff;
+}
+
+@media screen and (max-width: 767px) {
+	.contact-us__info-links {
+		gap: 12px;
+		margin-top: 20px;
+	}
+	
+	.contact-us__icon-circle {
+		width: 36px;
+		height: 36px;
+	}
+	
+	.contact-us__icon-circle svg {
+		width: 18px;
+		height: 18px;
+	}
+}
