@@ -1,0 +1,465 @@
+.anti-flicker, .anti-flicker * {visibility: hidden !important; opacity: 0 !important;}
+[data-wf-hidden-variation], [data-wf-hidden-variation] * {
+        display: none !important;
+      }
+
+.y25q1-testimonials {
+	padding: 120px 0;
+	background: #000000;
+}
+
+.y25q1-testimonials__row-title {
+	margin-bottom: 80px;
+}
+
+.y25q1-testimonials__grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 24px;
+}
+
+.y25q1-testimonials__card {
+	background: rgba(255, 255, 255, 0.03);
+	border-radius: 12px;
+	padding: 24px;
+	box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+	border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.y25q1-testimonials__card-quote {
+	margin-bottom: 16px;
+	opacity: 0.3;
+}
+
+.y25q1-testimonials__card-quote svg {
+	width: 32px;
+	height: 32px;
+}
+
+.y25q1-testimonials__card-text {
+	font-size: 15px;
+	line-height: 1.6;
+	color: rgba(255, 255, 255, 0.9);
+	margin-bottom: 20px;
+	font-style: italic;
+}
+
+.y25q1-testimonials__card-author {
+	padding-top: 16px;
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.y25q1-testimonials__card-info h4 {
+	font-size: 16px;
+	font-weight: 600;
+	color: #ffffff;
+	margin-bottom: 2px;
+}
+
+.y25q1-testimonials__card-info .eyebrow {
+	font-size: 12px;
+	color: rgba(255, 255, 255, 0.6);
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+@media screen and (max-width: 991px) {
+	.y25q1-testimonials {
+		padding: 60px 0;
+	}
+	
+	.y25q1-testimonials__row-title {
+		margin-bottom: 40px;
+	}
+	
+	.y25q1-testimonials__grid {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 16px;
+	}
+	
+	.y25q1-testimonials__card {
+		padding: 20px;
+	}
+	
+	.y25q1-testimonials__card-text {
+		font-size: 14px;
+		line-height: 1.5;
+	}
+	
+	.y25q1-testimonials__card-info h4 {
+		font-size: 15px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.y25q1-testimonials {
+		padding: 40px 0;
+	}
+	
+	.y25q1-testimonials__row-title {
+		margin-bottom: 24px;
+	}
+	
+	.y25q1-testimonials__grid {
+		grid-template-columns: 1fr;
+		gap: 12px;
+	}
+	
+	.y25q1-testimonials__card {
+		padding: 16px;
+	}
+	
+	.y25q1-testimonials__card-quote {
+		margin-bottom: 12px;
+	}
+	
+	.y25q1-testimonials__card-quote svg {
+		width: 24px;
+		height: 24px;
+	}
+	
+	.y25q1-testimonials__card-text {
+		font-size: 13px;
+		line-height: 1.5;
+		margin-bottom: 12px;
+	}
+	
+	.y25q1-testimonials__card-author {
+		padding-top: 12px;
+	}
+	
+	.y25q1-testimonials__card-info h4 {
+		font-size: 14px;
+		margin-bottom: 2px;
+	}
+	
+	.y25q1-testimonials__card-info .eyebrow {
+		font-size: 11px;
+	}
+}
+
+.contact-us-section {
+	padding: 100px 0;
+	background-color: var(--color-light);
+	color: var(--color-dark);
+}
+
+.contact-us__section-title {
+	margin-bottom: 60px;
+	text-align: center;
+}
+
+.contact-us__section-title .icon-title-h2 {
+	color: #1a1a1a;
+}
+
+.contact-us__section-title .h2-icon {
+	width: 72px;
+	height: 72px;
+}
+
+.contact-us__row {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 50px;
+	align-items: start;
+}
+
+.contact-us__content {
+	padding-right: 20px;
+}
+
+.contact-us__eyebrow {
+	margin-bottom: 16px;
+}
+
+.eyebrow.is--red {
+	color: #ff5757;
+	font-size: 13px;
+	font-weight: 600;
+	text-transform: none;
+	display: inline-block;
+}
+
+.eyebrow.is--red::before {
+	content: "•";
+	display: inline-block;
+	margin-right: 6px;
+	font-size: 16px;
+}
+
+.contact-us__title {
+	font-size: 32px;
+	line-height: 1.2;
+	font-weight: 700;
+	color: #1a1a1a;
+	margin-bottom: 16px;
+	letter-spacing: -0.02em;
+}
+
+.contact-us__description {
+	font-size: 15px;
+	line-height: 1.6;
+	color: #4a4a4a;
+	margin-bottom: 24px;
+}
+
+.contact-us__list {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 24px 0;
+}
+
+.contact-us__list-item {
+	font-size: 14px;
+	line-height: 1.6;
+	color: #2a2a2a;
+	padding-left: 20px;
+	margin-bottom: 12px;
+	position: relative;
+}
+
+.contact-us__list-item::before {
+	content: "•";
+	position: absolute;
+	left: 0;
+	color: #1a1a1a;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.contact-us__footer-text {
+	font-size: 14px;
+	line-height: 1.6;
+	color: #4a4a4a;
+	margin-top: 24px;
+}
+
+.contact-us__form-wrapper {
+	background: #ffffff;
+	border-radius: 12px;
+	padding: 32px;
+	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.contact-us__form {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.contact-us__form-row {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 12px;
+}
+
+.contact-us__form-field {
+	position: relative;
+}
+
+.contact-us__form-field--validated {
+	position: relative;
+}
+
+.contact-us__input {
+	width: 100%;
+	padding: 11px 14px;
+	border: 1px solid #d0d0d0;
+	border-radius: 6px;
+	font-size: 14px;
+	color: #1a1a1a;
+	background: #ffffff;
+	transition: all 0.2s ease;
+	font-family: inherit;
+}
+
+.contact-us__input::placeholder {
+	color: #999999;
+}
+
+.contact-us__input:focus {
+	outline: none;
+	border-color: #6b5ce7;
+	box-shadow: 0 0 0 3px rgba(107, 92, 231, 0.1);
+}
+
+.contact-us__select {
+	appearance: none;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%23666' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: right 14px center;
+	padding-right: 36px;
+	cursor: pointer;
+}
+
+.contact-us__select--validated {
+	border-color: #4caf50;
+	padding-right: 40px;
+}
+
+.contact-us__validation-icon {
+	position: absolute;
+	right: 14px;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #4caf50;
+	font-size: 16px;
+	font-weight: bold;
+	pointer-events: none;
+}
+
+.contact-us__phone-wrapper {
+	display: flex;
+	align-items: center;
+	border: 1px solid #d0d0d0;
+	border-radius: 8px;
+	background: #ffffff;
+	transition: all 0.2s ease;
+}
+
+.contact-us__phone-wrapper:focus-within {
+	border-color: #6b5ce7;
+	box-shadow: 0 0 0 3px rgba(107, 92, 231, 0.1);
+}
+
+.contact-us__phone-prefix {
+	padding: 0 12px;
+	color: #666;
+	font-size: 14px;
+	border-right: 1px solid #e0e0e0;
+	white-space: nowrap;
+}
+
+.contact-us__phone-input {
+	border: none;
+	border-radius: 0 6px 6px 0;
+	flex: 1;
+}
+
+.contact-us__phone-input:focus {
+	box-shadow: none;
+	border-color: transparent;
+}
+
+.contact-us__textarea {
+	resize: vertical;
+	min-height: 100px;
+	line-height: 1.5;
+}
+
+.contact-us__privacy {
+	font-size: 12px;
+	line-height: 1.5;
+	color: #666666;
+	margin: 6px 0;
+}
+
+.contact-us__privacy-link {
+	color: #1a1a1a;
+	text-decoration: underline;
+}
+
+.contact-us__privacy-link:hover {
+	color: #ff5757;
+}
+
+.contact-us__submit-btn {
+	width: 100%;
+	padding: 13px 20px;
+	background: #ff5757;
+	color: #ffffff;
+	border: none;
+	border-radius: 6px;
+	font-size: 15px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	font-family: inherit;
+	margin-top: 6px;
+}
+
+.contact-us__submit-btn:hover {
+	background: #ff3d3d;
+	transform: translateY(-1px);
+	box-shadow: 0 4px 12px rgba(255, 87, 87, 0.3);
+}
+
+.contact-us__submit-btn:active {
+	transform: translateY(0);
+}
+
+.y25q1-btr .growing-card__img .cover-image {
+	object-fit: contain;
+	position: relative;
+	top: auto;
+	left: auto;
+}
+
+.y25q1-btr .growing-card__number-list {
+	grid-template-columns: 1fr !important;
+}
+
+@media screen and (max-width: 991px) {
+	.contact-us-section {
+		padding: 60px 0;
+	}
+	
+	.contact-us__row {
+		grid-template-columns: 1fr;
+		gap: 40px;
+	}
+	
+	.contact-us__content {
+		padding-right: 0;
+	}
+	
+	.contact-us__title {
+		font-size: 36px;
+	}
+	
+	.contact-us__form-wrapper {
+		padding: 32px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.contact-us-section {
+		padding: 40px 0;
+	}
+	
+	.contact-us__row {
+		gap: 32px;
+	}
+	
+	.contact-us__title {
+		font-size: 28px;
+	}
+	
+	.contact-us__description {
+		font-size: 16px;
+	}
+	
+	.contact-us__list-item {
+		font-size: 15px;
+	}
+	
+	.contact-us__form-wrapper {
+		padding: 24px;
+	}
+	
+	.contact-us__form-row {
+		grid-template-columns: 1fr;
+		gap: 16px;
+	}
+	
+	.contact-us__input {
+		font-size: 14px;
+		padding: 12px 14px;
+	}
+	
+	.contact-us__submit-btn {
+		font-size: 15px;
+		padding: 14px 20px;
+	}
+}
