@@ -1,0 +1,70 @@
+<div data-flickity-item class="flickity-item">
+    <div data-accordion-status="not-active" class="growing-card is--dark">
+        <div class="gradient-box">
+            <div class="gradient-box__dark">
+                <div class="gradient-box__gradient-bg"></div>
+            </div>
+        </div>
+        <div data-hover data-accordion-toggle class="growing-card__top">
+            <div class="growing-card__top-eyebrow">
+                <p class="eyebrow">
+                    <%= role %>
+                </p>
+                <div class="plus">
+                    <div class="plus__bar"></div>
+                    <div class="plus__bar"></div>
+                </div>
+            </div>
+            <div class="growing-card__top-title">
+                <h3 class="growing-card__h4">
+                    <%= name %>
+                </h3>
+            </div>
+        </div>
+        <div class="growing-card__bottom">
+            <div class="growing-card__bottom-wrap">
+                <div class="growing-card__bottom-content">
+                    <div class="growing-card__number-list">
+                        <div class="growing-card__number-text">
+                            <p class="growing-card__number">
+                                <%= title %>
+                            </p>
+                            <p>
+                                <%= desc %>
+                            </p>
+                        </div>
+                    </div>
+                    <% if (hasBtn) { %>
+                        <div class="growing-card__row-btn">
+                            <a href="<%= link %>" target="_blank" class="arrow-btn w-inline-block">
+                                <span class="arrow-btn__span">
+                                    <%= linkText %>
+                                </span>
+                                <div class="arrow-btn__arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 24" fill="none"
+                                        class="arrow-btn__arrow-svg">
+                                        <path d="M14 19L21 12L14 5" stroke="currentColor" stroke-miterlimit="10"
+                                            stroke-width="2"></path>
+                                        <path d="M21 12H2" stroke="currentColor" stroke-miterlimit="10"
+                                            stroke-width="2"></path>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 24" fill="none"
+                                        class="arrow-btn__arrow-svg is--duplicate">
+                                        <path d="M14 19L21 12L14 5" stroke="currentColor" stroke-miterlimit="10"
+                                            stroke-width="2"></path>
+                                        <path d="M21 12H2" stroke="currentColor" stroke-miterlimit="10"
+                                            stroke-width="2"></path>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                        <% } %>
+                </div>
+            </div>
+            <div data-accordion-toggle class="growing-card__img">
+                <img src="<%= img %>" loading="lazy" width="720" sizes="(max-width: 767px) 100vw, 720px" alt
+                    class="cover-image" />
+            </div>
+        </div>
+    </div>
+</div>

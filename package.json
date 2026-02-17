@@ -1,0 +1,25 @@
+{
+  "name": "community-ride-sharing-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brigdethe/Community-Ride-Sharing-App.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/brigdethe/Community-Ride-Sharing-App/issues"
+  },
+  "homepage": "https://github.com/brigdethe/Community-Ride-Sharing-App#readme",
+  "dependencies": {
+    "ejs": "^4.0.1",
+    "express": "^5.2.1"
+  }
+}
